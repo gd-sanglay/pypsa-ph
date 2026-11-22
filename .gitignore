@@ -10,10 +10,8 @@ results/
 gurobi.lic
 *.lic
 
-# large or externally hosted inputs (see data/README.md)
+# externally hosted inputs (see data/README.md)
 data/external/
-data/PYPSAPH_LOAD_TIMESERIES.xlsx
-data/PYPSAPH_VRE_GENERATOR_EXT_TIMESERIES.xlsx
 
 # HPC logs
 Logs/

@@ -15,21 +15,18 @@ All workbooks are read by `run_pypsaph.py`. Sheet names that end in a year (`_20
 | `PYPSAPH_LOADSHEDDING.xlsx` | `load_shedding` | Load-shedding pseudo-generators per load bus (value of lost load) |
 | `PYPSAPH_SPATIAL_RESOLUTION_BARANGAY.xlsx` | `PYPSAPH_spatial_resolution` | Barangay (ADM4) to zone mapping for spatial levels 1–4 |
 | `PYPSAPH_VRE_GENERATOR_BASE_TIMESERIES.xlsx` | `generators_t_VRE` | Hourly availability (p_max_pu) of existing VRE plants |
+| `PYPSAPH_LOAD_TIMESERIES.xlsx` | `loads_t`, `loads_t_{year}` | Load buses and their voltage (`loads_t`); hourly load in MW per bus |
+| `PYPSAPH_VRE_GENERATOR_EXT_TIMESERIES.xlsx` | `generators_t_VRE_ext_{year}` | Hourly availability (p_max_pu) of new and candidate VRE plants in `gen_ext_{year}` |
 
 ## Download separately
 
-These are too large for the repository. Place them as shown:
+The barangay boundary shapefile is public and is not redistributed here. Download it and place it as shown:
 
 | File | Location | Source |
 |---|---|---|
-| `PYPSAPH_LOAD_TIMESERIES.xlsx` (~50 MB) | `data/` | Zenodo: *DOI to be added* |
-| `PYPSAPH_VRE_GENERATOR_EXT_TIMESERIES.xlsx` (~35 MB) | `data/` | Zenodo: *DOI to be added* |
 | `phl_admbnda_adm4_psa_namria_20231106.shp` (+ `.dbf`, `.shx`, `.prj`) | `data/external/PH_ADMIN/` | PSA/NAMRIA barangay boundaries, via HDX: <https://data.humdata.org/dataset/cod-ab-phl> |
 
-Expected structure of the two time-series workbooks:
-
-- `PYPSAPH_LOAD_TIMESERIES.xlsx`: sheet `loads_t` (index `bus`, column `v_nom`), and sheets `loads_t_{year}` (hourly load in MW, one column per bus, datetime index).
-- `PYPSAPH_VRE_GENERATOR_EXT_TIMESERIES.xlsx`: sheets `generators_t_VRE_ext_{year}` (hourly p_max_pu, one column per generator in `gen_ext_{year}`, datetime index).
+A newer release of the boundaries should also work if it keeps the `ADM4_PCODE` codes; pass its path with `--shapefile`.
 
 ## Generated during a run
 

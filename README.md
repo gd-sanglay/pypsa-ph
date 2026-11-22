@@ -39,7 +39,7 @@ conda env create -f environment.yml
 conda activate pypsa-ph
 ```
 
-Then download the large inputs listed in [`data/README.md`](data/README.md).
+Then download the barangay boundary shapefile listed in [`data/README.md`](data/README.md). All other inputs are included.
 
 HiGHS is installed by default. Full-resolution runs (spatial level 3, 1–2 h) are large and were solved with Gurobi on an HPC cluster. Install `gurobi` and provide your own licence for these.
 

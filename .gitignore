@@ -1,0 +1,27 @@
+# results and solver files
+results/
+*.lp
+*.mps
+*.sol
+*.log
+*.nc
+
+# solver licences, never commit
+gurobi.lic
+*.lic
+
+# large or externally hosted inputs (see data/README.md)
+data/external/
+data/PYPSAPH_LOAD_TIMESERIES.xlsx
+data/PYPSAPH_VRE_GENERATOR_EXT_TIMESERIES.xlsx
+
+# HPC logs
+Logs/
+slurm-*.out
+
+# Python / notebooks / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+~$*.xlsx
